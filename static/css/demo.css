@@ -1,7 +1,14 @@
+/*图标大小*/
 #demo-icon{
     height: 3rem;
 }
+
+/*网页滑动bug*/
 body{
     width: 100vw;
+    overflow-x:hidden;
+}
+/*页脚溢出异常*/
+.footer{
     overflow-x:hidden;
 }
