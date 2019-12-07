@@ -1,3 +1,7 @@
 #demo-icon{
     height: 3rem;
 }
+body{
+    width: 100vw;
+    overflow-x:hidden;
+}
