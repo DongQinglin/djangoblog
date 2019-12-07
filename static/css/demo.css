@@ -2,7 +2,12 @@
 #demo-icon{
     height: 3rem;
 }
-
+/*隐藏滚动条*/
+.scrollHidden::-webkit-scrollbar { width: 0 !important }
+.scrollHidden{
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
 /*网页滑动bug*/
 body{
     width: 100vw;
