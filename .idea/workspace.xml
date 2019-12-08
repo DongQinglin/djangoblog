@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa9d6864-abe3-49fc-a445-2905c0968887" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/js/demo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/demo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-    </list>
+    <list default="true" id="fa9d6864-abe3-49fc-a445-2905c0968887" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +116,7 @@
       <workItem from="1575607586395" duration="249000" />
       <workItem from="1575627031818" duration="24317000" />
       <workItem from="1575661458423" duration="528000" />
+      <workItem from="1575784016235" duration="272000" />
     </task>
     <servers />
   </component>
