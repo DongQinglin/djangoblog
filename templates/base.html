@@ -20,60 +20,74 @@
     <link rel='stylesheet' id='raxus-css' href='{% static "css/raxus.css" %}' type='text/css' media='all'/>
     <link rel='stylesheet' id='open-social-style-css' href='{% static "css/os.css" %}' type='text/css' media='all'/>
     <link rel='stylesheet' id='demo-css' href='{% static "css/demo.css" %}' type='text/css' media='all'/>
-
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <script type='text/javascript' src='{% static "js/demo.js" %}'></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
 </head>
-<body class="scrollHidden">
+<body>
 {#<div>头部</div>#}
 <!-- 头部 -->
-<header class="fix-wrap" id="fix-wrap">
-    <div class="fix-main clearfix pr" id="fix-main" _hover-ignore="1"><a href="/" class="index-logo">
-        <img id="demo-icon" src="/static/picture/logo-black.png" alt="法宝儿"></a>
-        <nav class="nav navbar-default fl">
-    <ul id="fix-list" class="fix-list">
-        <li id="menu-item-index" class="menu-item">
-            <a href="/">首页</a>
-        </li>
-       {% for ArticleKind in allArticleKind %}
-       <li class="menu-item">
-           <a href="list-{{ ArticleKind.id}}.html">{{ ArticleKind.name }}</a>
-       </li>
-       {% endfor %}
+<ion-app>
+    <ion-content>
 
-        <li id="menu-item-about" class="menu-item">
-            <a href="/about/">关于</a>
-        </li>
-    </ul>
-</nav>
-        <form method="get" class="index-search  hidden-xs" action="/s/">
-            <input class="text" name="search" type="text" placeholder="输入关键字" value="">
-            <button class="submit" type="submit"><i class="fa fa-search"></i></button>
-        </form>
-    </div>
-</header>
-
-<div id="main-container" class="container clearfix">
+        <ion-refresher slot="fixed" on-refresh="doRefresh()">
+            <ion-refresher-content refreshing-text="下拉刷新..."></ion-refresher-content>
+        </ion-refresher>
 
 
-{#            </div>#}
-{#        </section>#}
-{#</div>#}
-        {#    左侧完#}
-                <!-- /banner图 -->
+        <header class="fix-wrap" id="fix-wrap">
+            <div class="fix-main clearfix pr" id="fix-main" _hover-ignore="1"><a href="/" class="index-logo">
+                <img id="demo-icon" src="/static/picture/logo-black.png" alt="法宝儿"></a>
+                <nav class="nav navbar-default fl">
+            <ul id="fix-list" class="fix-list">
+                <li id="menu-item-index" class="menu-item">
+                    <a href="/">首页</a>
+                </li>
+               {% for ArticleKind in allArticleKind %}
+               <li class="menu-item">
+                   <a href="list-{{ ArticleKind.id}}.html">{{ ArticleKind.name }}</a>
+               </li>
+               {% endfor %}
 
-            {% block content %}
+                <li id="menu-item-about" class="menu-item">
+                    <a href="/about/">关于</a>
+                </li>
+            </ul>
+        </nav>
+                <form method="get" class="index-search  hidden-xs" action="/s/">
+                    <input class="text" name="search" type="text" placeholder="输入关键字" value="">
+                    <button class="submit" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </header>
 
-            {% endblock %}
+        <div id="main-container" class="container clearfix">
 
 
-</div>
+        {#            </div>#}
+        {#        </section>#}
+        {#</div>#}
+                {#    左侧完#}
+                        <!-- /banner图 -->
 
-<!-- 底部 -->
-<footer class="footer">
-    <div class="copyright"> © 2010- 2018 · All Rights Reserved
-        · <a href="https://www.fabaoer.cn">元青的法律笔记</a>
-        · <a href="http://www.miibeian.gov.cn" target="_blank">豫ICP备19030707号</a>
-    </div>
-</footer>
+                    {% block content %}
+
+                    {% endblock %}
+
+
+        </div>
+
+        <!-- 底部 -->
+        <footer class="footer">
+            <div class="copyright"> © 2010- 2018 · All Rights Reserved
+                · <a href="https://www.fabaoer.cn">元青的法律笔记</a>
+                · <a href="http://www.miibeian.gov.cn" target="_blank">豫ICP备19030707号</a>
+            </div>
+        </footer>
+    </ion-content>
+</ion-app>
+
 </body>
 
 
@@ -85,5 +99,6 @@
 <script type='text/javascript' src='{% static "js/loader.js" %}'></script>
 <script type='text/javascript' src='{% static "js/bj-lazy-load.min.js" %}'></script>
 <script type='text/javascript' src='{% static "js/os.js" %}'></script>
-<script src="{% static "js/safariResponse.js" %}" type="text/javascript" charset="utf-8"></script>
+<script type='text/javascript' src="{% static "js/safariResponse.js" %}" type="text/javascript" charset="utf-8"></script>
+
 </html>

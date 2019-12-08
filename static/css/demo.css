@@ -3,10 +3,10 @@
     height: 3rem;
 }
 /*隐藏滚动条*/
-.scrollHidden::-webkit-scrollbar { width: 0 !important }
-.scrollHidden{
-    -ms-overflow-style: none;
-    overflow: -moz-scrollbars-none;
+*::-webkit-scrollbar { width: 0 !important }
+*{
+    -ms-overflow-style: none!important;
+    overflow: -moz-scrollbars-none!important;
 }
 /*网页滑动bug*/
 body{
